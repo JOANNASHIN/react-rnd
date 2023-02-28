@@ -3,6 +3,14 @@ import utilStyles from '../styles/utils.module.css';
 import Layout, { siteTitle } from '@/components/layout';
 import { getSortedPostsData } from '../lib/posts';
 
+interface HomeProps {
+  allPostsData: {
+    id: string;
+    date: string;
+    title: string;
+  }[]
+}
+
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
   return {
@@ -12,7 +20,7 @@ export async function getStaticProps() {
   }
 }
 
-export default function Home({ allPostsData }) {
+export default function Home({ allPostsData }: HomeProps) {
   return (
     <Layout home>
       <Head>
