@@ -1,59 +1,69 @@
 import Head from 'next/head'
-import utilStyles from '../styles/utils.module.css';
+import invitationStyles from '../styles/invitation.module.css';
 import Layout, { siteTitle } from '@/components/layout';
-import { getSortedPostsData } from '../library/posts';
 
-interface HomeProps {
-  allPostsData: {
-    id: string;
-    date: string;
-    title: string;
-  }[]
-}
-
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  return {
-    props: {
-      allPostsData,
-    }
-  }
-}
-
-export default function Home({ allPostsData }: HomeProps) {
+export default function Home() {
   return (
     <>
-      <Layout>
+     <Head>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" cross-origin />
+        <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Montserrat:wght@200;400;500;600&family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet" />
+        <meta
+          name="description"
+          content="Learn how to build a personal website using Next.js"
+        />
+        <meta
+          property="og:image"
+          content={`https://og-image.vercel.app/${encodeURI(
+            siteTitle,
+          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+          />
+        <meta name="og:title" content={siteTitle} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <title>{siteTitle}</title>
+      </Head>
+
+      <div className={invitationStyles.invitation}>
+        
         {/* 메인사진 */}
-        <section>
-          <h1>05/19</h1>
-          <div>
-            <span>신지은</span>
+        <section className={invitationStyles.main}>
+          <h1 className={`${invitationStyles.date} ${invitationStyles.verticalDate}`}>
+            <span>
+              05
+            </span>
+            <em>
+              /
+            </em>
+            <span>
+              19
+            </span>
+          </h1>
+          <div className={invitationStyles.name}>
             <span>이지훈</span>
+            <span>신지은</span>
           </div>
-          <figure>
-            <img src="" alt="" />
+          <figure className={invitationStyles.mainImg}>
+            <img src="/images/sample2.jpg" alt="" />
           </figure>
-          <p>결혼합니다.</p>
+          <p className={invitationStyles.text}>결혼합니다</p>
         </section>
 
         {/* 초대글 */}
-        <section>
-          <h1>초대합니다</h1>
-          <p>
+        <section className={invitationStyles.invite}>
+          <h1 className={invitationStyles.inviteTitle}>초대합니다</h1>
+          <p className={invitationStyles.inviteText}>
             서로가 마주보며 다져온 사랑을<br/>
-            이제 함께 한 곳을 바라보며<br/>
-            걸어갈 수 있는 큰 사랑으로 <br/>
-            키우고자 합니다. <br/>
-            저희 두 사람이 사랑의 이름으로<br/>
-            지켜나갈 수 있도록<br/>
-            앞날을 축복해 주시면<br/>
-            감사하겠습니다.
+            이제 함께 한 곳을 바라보며 걸어갈 수 있는<br/>
+            큰 사랑으로 키우고자 합니다. <br/>
+            저희 두 사람이 사랑의 이름으로 지켜나갈 수 있도록<br/>
+            앞날을 축복해 주시면 감사하겠습니다.
           </p>
 
-          <div>
+          <div className={invitationStyles.who}>
             <p>
-              <em>상준</em> ∙ <em>영애</em>의 장남 <b>지훈</b>
+              <em>상민</em> ∙ <em>영애</em>의 장남 <b>지훈</b>
             </p>
             <p>
               <em>동옥</em> ∙ <em>미경</em>의 장녀 <b>지은</b>
@@ -170,7 +180,7 @@ export default function Home({ allPostsData }: HomeProps) {
           </div>
         </section>
 
-      </Layout>
+      </div>
     </>
   )
 }

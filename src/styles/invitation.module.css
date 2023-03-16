@@ -1,0 +1,139 @@
+.invitation {
+    padding: 1rem;
+    /* font-family: 'Nanum Myeongjo', serif; */
+    font-family: 'Gowun Batang', serif;
+    letter-spacing: 0rem;
+}
+
+.invitation em {
+    font-style: initial;
+}
+
+.invitation section {
+    margin-bottom: 6rem;
+}
+
+.main {
+    text-align: center;
+    letter-spacing: 0.4rem;
+}
+
+.date {
+    display: flex;
+    justify-content: center;
+    margin: 4.5rem 0 2rem;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.verticalDate {
+    flex-direction: column;
+    font-size: 1.2rem;
+}
+
+.verticalDate em {
+    font-size: 1rem;
+}
+
+.name {
+    display: flex;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 6rem 0 4rem;
+}
+
+.name span {
+    display: inline-block;
+    margin: 0 1.5rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    writing-mode: vertical-lr;
+}
+
+.mainImg {
+    overflow: hidden;
+    position: relative;
+}
+
+.mainImg::before {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-bottom: 100%;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.mainImg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 100%;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.mainImg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    filter: grayscale(40%);
+    transform: translate(0, -18%);
+
+}
+
+.text {
+    display: inline-block;
+    margin-top: 3rem;
+    font-weight: 400;
+    font-size: 1.3rem;
+    text-align: center;
+    letter-spacing: 1rem;
+    writing-mode: vertical-lr;
+}
+
+.invite {
+   
+}
+.inviteTitle {
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+}
+
+.inviteTitle:after {
+    content: '';
+    display: inline-block;
+    width: 10rem;
+    height: 1px;
+    margin: 0 0.6rem 0.2rem;
+    vertical-align: middle;
+    background: #000;
+
+}
+
+.inviteText {
+    padding: 1rem 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.who {
+    display: block;
+    margin: 2.5rem auto;
+    /* margin: 6rem auto; */
+    font-size: 1.1rem;
+    /* border: 1px dotted #ddd;
+    border-left: none;
+    border-right: none; */
+    /* text-align: right; */
+    text-align: center;
+}
+
+.who p {
+    margin: 0.5rem 0;
+}
+.who b {
+    font-size: 1.3rem;
+}
