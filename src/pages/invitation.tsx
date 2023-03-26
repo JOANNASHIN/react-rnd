@@ -63,10 +63,10 @@ export default function Home() {
 
           <div className={invitationStyles.who}>
             <p>
-              <em>상민</em> ∙ <em>영애</em>의 장남 <b>지훈</b>
+              <em>상민</em> ∙ <em>영애</em>의 아들 <b>지훈</b>
             </p>
             <p>
-              <em>동옥</em> ∙ <em>미경</em>의 장녀 <b>지은</b>
+              <em>동옥</em> ∙ <em>미경</em>의 딸 <b>지은</b>
             </p>
           </div>
         </section>
