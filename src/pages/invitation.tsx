@@ -1,8 +1,13 @@
+import React, { useState } from 'react';
 import Head from 'next/head'
 import invitationStyles from '../styles/invitation.module.css';
 import Layout, { siteTitle } from '@/components/layout';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 
 export default function Home() {
+  const [value, onChange] = useState(new Date("2024-05-19"));
+
   return (
     <>
      <Head>
@@ -75,7 +80,9 @@ export default function Home() {
         <section>
           <h1>달력</h1>
           <div>
-            05/19
+          <div>
+            <Calendar value={value} />
+          </div>
           </div>
         </section>
         
