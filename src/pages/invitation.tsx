@@ -77,11 +77,11 @@ export default function Home() {
         </section>
 
         {/* 달력 */}
-        <section>
+        <section className={`${invitationStyles.calendar} calendar`}>
           <h1>달력</h1>
           <div>
           <div>
-            <Calendar value={value} />
+            <Calendar className={`${invitationStyles.calendarBox} calendarBox`} value={value} />
           </div>
           </div>
         </section>

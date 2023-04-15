@@ -98,3 +98,20 @@ a {
     color-scheme: dark;
   }
 }
+
+
+
+
+
+/* TODO: 옮겨야함 */
+.calendarBox .react-calendar__navigation__arrow {
+  display: none !important;
+}
+.calendarBox .react-calendar__tile  {
+  padding: 1rem 0 !important;
+}
+
+.calendarBox .react-calendar__tile--active {
+  background: rgba(248, 226, 100, 0.863) !important;
+  color: #111 !important;
+}
