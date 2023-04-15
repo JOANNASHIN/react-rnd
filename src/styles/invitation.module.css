@@ -150,7 +150,9 @@
 
 .calendarBox {
     width: 100% !important;
+    padding: 1rem 0 !important;
     margin-top: 1.2rem !important;
-    border: 1px solid #ddd !important;
-    border-radius: 0.5rem !important;
+    border: none !important;
+    border-top: 1px solid #eee !important;
+    border-bottom: 1px solid #eee !important;
 }
