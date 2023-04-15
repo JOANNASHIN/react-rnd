@@ -108,10 +108,14 @@ a {
   display: none !important;
 }
 .calendarBox .react-calendar__tile  {
-  padding: 1rem 0 !important;
+  padding: 1.5rem 0 !important;
 }
 
 .calendarBox .react-calendar__tile--active {
   background: rgba(248, 226, 100, 0.863) !important;
+  border-radius: 50%;
   color: #111 !important;
+}
+.calendarBox .react-calendar__tile:enabled:hover, .react-calendar__tile:enabled:focus {
+  background: none !important;
 }
