@@ -34,8 +34,6 @@ export default function createFastContext<Store>(initialState: Store) {
 
       subscribers.current.forEach((callback) => callback());
     }, []);
-    
-    
 
     const subscribe = useCallback((callback: TCallback) => {
       subscribers.current.add(callback);
@@ -83,6 +81,7 @@ export default function createFastContext<Store>(initialState: Store) {
       throw new Error('Store not found');
     }
 
+    //원래 이 방법을 밑에처럼 처리함
     // const [state, setState] = useState(store.get());
 
     // useEffect(() => {
